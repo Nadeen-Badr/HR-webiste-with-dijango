@@ -1,0 +1,28 @@
+{% load static %} <!--connect base.html with style.css-->
+<!-- <link rel="stylesheet" href="{% static 'css/home.css'%}"> -->
+
+<!--{include 'parts/navBar.html'} --> <!--if i wanna to add navBar in the top of page should write it before -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'%}"/>
+        <link rel="stylesheet" href="{% static 'Css\ourfirstpage.css'%}">
+        <title>HR Website </title>
+    </head>
+    <body>
+        <script src="{% static 'https://kit.fontawecome.com/a076d05399.js'%}">
+        </script>
+        {% include 'partials/_navbar.html'%}
+
+        {% block content%}
+        {% endblock content%}          
+
+        {% include 'partials/_footer.html'%}
+    </body>
+</html>
+
+
+<!--{include 'parts/footer.html'} --><!--if i wanna to add footer in the end of page(below)-->

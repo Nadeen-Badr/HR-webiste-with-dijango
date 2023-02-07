@@ -1,0 +1,21 @@
+{% load static %}
+<!--navbar-->
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    
+    <label class="logo">Global HR</label>
+    <ul>
+        <!--class="active"-->
+        <li><a class="active" href="{% url 'index'%}">Home</a></li>
+        <li><a class="" href="{% url 'about'%}" target="_self">Global HR</a></li>
+        <!--here all of the bottom exist in account app -->
+        <li><a href="{% url 'signin'%}"  target="_self">log in</a></li>
+        <!--{ url 'addemployee'}, { url 'search'},{url 'vacations'} -->
+        <li><a href="{% url 'addemployee'%}" target="_self">Add Employee</a></li>
+        <li><a href="{% url 'search'%}" target="_self">Search</a></li>
+        <li><a href="{% url 'vacations'%}"  target="_self">Vacations</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="..\Css\insert.css">
+    <title>How to add & remove table rows</title>
+    <link
+        <style> </style>
+  </head>
+  <body>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <label class="logo">Global HR</label>
+                <ul>
+                    <li><a class="" href="home.html" target="_self">Home</a></li>
+                    <li><a class="" href="ourfirstpage.html" target="_self">Global HR</a></li>
+                    <li><a href="loginpage.html"  target="_self">log in</a></li>
+                    <li><a class="active" href="insertEmployee.html" target="_self">Add Employee</a></li>
+                    <li><a href="search.html" target="_self">Search</a></li>
+                    <li><a href="vacation.html"  target="_self">Vacations</a></li>
+                </ul>
+            </nav>
+            
+        <div class="container">
+            <div class="card">
+                <div class="inner-box">
+                    <div class="card-front">
+                        <h2>Add Employee</h2>
+                        <form action="" target="_self" class="data">
+                          
+                            <div class="input-row">
+                            <input type="text" name="name" id="name" placeholder="Enter the name" required/>
+                            </div>
+                          
+                            <div class="input-row">
+                            <input type="number" name="id" id="id" placeholder="Enter the id" required/> <!--min="1" max="100" readonly-->
+                            </div>
+                            
+                            <div class="input-row">
+                            <input type="email" name="email" id="email" placeholder="Enter the E-mail" required/>
+                            </div>
+                            
+                            <div class="input-row">
+                            <input type="password" name="password" id="password" placeholder="Enter the Password" required/>
+                            </div>
+                          
+                            <div class="input-row">
+                            <input type="text" name="address" id="address" placeholder="Enter the address" required/>
+                            </div>
+                          
+                            <div class="input-row">
+                            <input type="tel" name="telphone" id="telephone" placeholder="Enter the Telephone" required/>
+                            </div>
+                          
+                            <div class="input-row">
+                            <input type="number" name="av" id="av" placeholder="Enter the available vacation days" required/>
+                            </div>
+                            
+                            <div class="input-row">
+                            <input type="number" name="ac" id="ac" placeholder="Enter the actual approved vacation days" required/>
+                            </div>
+                            
+                            <div class="input-row">
+                            <label>Date Of Birth</label>
+                            <input type="date" name="dBirth" id="dBirth">
+                            </div>
+                            
+                            <div class="input-row">
+                            <label>Marital Status</label>
+                            <select name="ms" id="ms">
+                                <option>Married</option>
+                                <option>Single </option>
+                            </select>
+                            </div>
+                          
+                            <div class="input-row">
+                            <label>Gender</label>
+                            <select name="gn" id="gn">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            </div>
+                        
+                            <button class="btn">Submit</button>                    
+                        </form>
+                        
+                        <form>
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Name</th>    
+                                  <th>ID</th>
+                                  <th>E-Mail</th>
+                                  <th>Password</th>
+                                  <th>Address</th>
+                                  <th>Telephone</th>
+                                  <th>Available vacations</th>
+                                  <th>Actual vacations</th>
+                                  <th>Marital Status</th>
+                                  <th>Gender</th>
+                                  <th>Date Of Birth</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody></tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="..\js\insert.js">
+      
+    </script>
+  </body>
+</html>

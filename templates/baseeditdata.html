@@ -1,0 +1,26 @@
+{% load static %} <!--connect base.html with style.css-->
+<!-- <link rel="stylesheet" href="{% static 'css/home.css'%}"> -->
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'%}"/>
+        <link rel="stylesheet" href="{% static 'Css/style.css'%}">
+        <title>HR Website </title>
+    </head>
+    <body>
+        <script src="{% static 'js\delUpdate.js'%}"></script>
+        {% include 'partials/_navbar.html'%}
+
+        {% block content%}
+        {% endblock content%}          
+
+        {% include 'partials/_footer.html'%}
+    </body>
+</html>
+
+
+<!--{include 'parts/footer.html'} --><!--if i wanna to add footer in the end of page(below)-->

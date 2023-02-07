@@ -1,0 +1,19 @@
+{% extends 'base.html'%} <!--must be exist in the top of page-->
+{%load static%}
+
+
+{% block content%}
+<!--Content of home page-->
+<div class="content">
+    <p>Join Us with a Free Membership to Access the Educational Tools and Resources You Need to Stay Ahead and Compliant in the Ever Changing World of HR<br> <span class="d"> Trust us</span> and we will find your needs. <br>Here you will find some of websites our Target on HR Website so visit it and tell us your opinion. </p><br>
+    <div class="order-list">
+        <ol class="ol">
+            <li><a class ="we" href="{%url 'about'%}">Human Resources Website</a></li>
+            <li class ="f">Student Affairs website</li>
+            <li class ="f">Higher studies website</li>
+            <li class ="f">Laboratory tracking website</li>
+        </ol>
+    </div>
+</p>
+</div>
+{% endblock content%}   

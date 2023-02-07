@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="Show vacations">
+            <link rel="stylesheet" href="..\CSS\show-vacation.css"> 
+        </head>
+        <body>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <label class="logo">Global HR</label>
+                <ul>
+                    <li><a class="" href="home.html" target="_self">Home</a></li>
+                    <li><a class="" href="ourfirstpage.html" target="_self">Global HR</a></li>
+                    <li><a href=loginpage.html"  target="_self">log in</a></li>
+                    <li><a href="addemp.html" target="_self">Add Employee</a></li>
+                    <li><a href="search.html" target="_self">Search</a></li>
+                    <li><a class="active" href="vacation.html"  target="_self">Vacations</a></li>
+                </ul>
+            </nav>
+    
+            <table>
+                <tr>
+                    <th >Name</th>
+                    <th>Vacation from</th>
+                    <th>Vacation to</th>
+                    <th>Reason</th>
+                </tr>
+                <tr>
+                    <td>Maryem</td>
+                    <td>2020-01-13</td>
+                    <td>2022-04-14</td>
+                    <td>Family emergency</td>
+                    <td>
+                        <button class="approve" onclick="keep(this)">Approve</button>
+                        <button class="reject" onclick="remove(this)">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nadeen</td>
+                    <td>2022-05-14</td>
+                    <td>2022-06-14</td>
+                    <td>Family emergency</td>
+                    <td>
+                        <button class="approve" onclick="keep(this)">Approve</button>
+                        <button class="reject" onclick="remove(this)">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amira</td>
+                    <td>2022-01-01</td>
+                    <td>2022-02-01</td>
+                    <td>Health issues</td>
+                    <td>
+                        <button class="approve" onclick="keep(this)">Approve</button>
+                        <button class="reject" onclick="remove(this)">Reject</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shahd</td>
+                    <td>2021-12-14</td>
+                    <td>2022-01-10</td>
+                    <td>I will be travelling</td>
+                    <td>
+                        <button class="approve" onclick="keep(this)">Approve</button>
+                        <button class="reject" onclick="remove(this)">Reject</button>
+                    </td>
+                </tr>
+            </table>
+            <script src="..\JS\show-vacation.js"> </script>
+        </body>
+    </html>

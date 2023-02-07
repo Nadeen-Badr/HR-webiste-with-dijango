@@ -1,0 +1,83 @@
+{% extends 'basesearch.html'%}
+{% load static%}
+
+{% block content%}
+
+<div class="box">
+    <h1>Search</h1>
+    <!--<form name="" targe="_blanck" action="search-data.html">-->
+        <!--<input type="text" placeholder="Type to search...">-->
+        <input type="text" id="myInput" placeholder="Search for a name" onkeyup="myFunction()">
+        
+         
+        </form>
+  
+</div>
+<div class="mainTable" >
+    <table id="myTable" border="1"  >
+
+        <tr class="header">
+            <th> name</th>
+            <th>Id</th>
+            <th>email</th>
+            <th>adress</th>
+            <th>Phone number</th>
+            <th>Gender</th>
+            <th>martial status</th>
+            <th>vaction days</th>
+            <th>approved vaction days</th>
+            <th>salary</th>
+            <th>birth day</th>
+        </tr>
+        {% for emp  in emp %}
+            <tr>
+                <td>{{emp.Name}}</td>
+                <td>{{emp.Emp_Id}}</td>
+                <td>{{emp.Email}}</td>
+                <td>{{emp.address}}</td>
+                <td>{{emp.Phone_number}}</td>
+                <td>{{emp.Gender}}</td>
+                <td>{{emp.Martial_status}}</td>
+                <td>{{emp.Vacation_Days}}</td>
+                <td>{{emp.Vacation_Days_approved}}</td>
+                <td>{{emp.Salary}}</td>
+                <td>{{emp.Birthday}}</td>
+                <td><a class="sub" href="{% url 'editdata' emp.id %}"  type="submit" style="background-color: turquoise; border: none; border-radius: 5px; color: #333; /* Dark grey */ padding: 3px 3px" >Update</a></td>
+             
+                <td> <a class="sub" href="{% url 'delete' emp.id %}" type="submit" name="" value="search" style="background-color: red ; border: none; border-radius: 5px; color: #333; /* Dark grey */ padding: 3px 3px" >Delete</a></td>
+            </tr>
+        {% endfor %}
+        <style>
+
+        </style>
+        
+
+        
+        
+        </tbody>
+    </table>
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+</div>
+{% endblock content%}

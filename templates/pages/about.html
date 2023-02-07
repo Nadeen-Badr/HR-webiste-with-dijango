@@ -1,0 +1,30 @@
+{% extends 'baseabout.html'%}
+{% load static%}
+{% block content%}
+<!--content of our first page-->
+<div class="container">
+    <div class="card">
+        <div class="inner-box">
+            <div class="card-front">
+                <img src="{% static 'imgs\global-hr-experts.jpg'%}">
+                <div clas="log" >
+                    <h2>International human resources experts in-region for your team.</h2>
+                    <p>More than just software, our comprehensive solution is backed by a best-in-industry legal team and HR experts in each region where we do business. When you work with us, there are no extra or hidden fees, and we’re there for you every step of the way—from generating employment contracts to running compliant payroll, offering competitive benefits, 24/7/365 premium HR support, and more—we manage it all, so you can manage your business.</p>
+                    
+                    <h2>Let’s talk about your risk.</h2>
+                    <p>It can be tempting to try to skirt the labor laws in other countries by hiring contractors or otherwise deploying a workforce that might just slide under the radar of the local government. The costs are cheap and besides, you’re only testing the market anyway. You’ll get compliant when you have to. Right?</p>
+                
+                    <h2>Global HR Solutions to Manage Risk</h2>
+                    <p>When you work with with Globalization Partners, the candidates you choose to hire walk and talk like your employees, but they’re actually on our payroll, thus forcing all the compliance risk on us. But don’t worry, we can handle it. We are a U.S.-headquartered company ourselves, and more than 25% of our non-sales and marketing staff are legally qualified as lawyers in the United States.</p>
+                    <img src="{% static 'imgs\global-benefits.jpg'%}" height=300px;>
+                    <h1>Global Benefits</h1>
+                    <p>We have world-class and country-specific benefits packages to fit the needs of your global employees.</p>
+                </div>
+            </div>
+            <div class="card-back"></div>
+        </div>
+    </div>
+</div>
+{% endblock content%}
+
+

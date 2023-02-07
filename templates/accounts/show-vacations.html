@@ -1,0 +1,78 @@
+{% extends 'baseshow-vacations.html'%}
+{% load static%}
+
+{% block content%}
+<!--
+<table>
+    <tr>
+        <th >Name</th>
+        <th>Vacation from</th>
+        <th>Vacation to</th>
+        <th>Reason</th>
+    </tr>
+    
+    <tr>
+        <td>Maryem</td>
+        <td>2020-01-13</td>
+        <td>2022-04-14</td>
+        <td>Family emergency</td>
+        <td>
+            <button class="approve" onclick="keep(this)">Approve</button>
+            <button class="reject" onclick="remove(this)">Reject</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Nadeen</td>
+        <td>2022-05-14</td>
+        <td>2022-06-14</td>
+        <td>Family emergency</td>
+        <td>
+            <button class="approve" onclick="keep(this)">Approve</button>
+            <button class="reject" onclick="remove(this)">Reject</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Amira</td>
+        <td>2022-01-01</td>
+        <td>2022-02-01</td>
+        <td>Health issues</td>
+        <td>
+            <button class="approve" onclick="keep(this)">Approve</button>
+            <button class="reject" onclick="remove(this)">Reject</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Shahd</td>
+        <td>2021-12-14</td>
+        <td>2022-01-10</td>
+        <td>I will be travelling</td>
+        <td>
+            <button class="approve" onclick="keep(this)">Approve</button>
+            <button class="reject" onclick="remove(this)">Reject</button>
+        </td>
+    </tr>
+</table>
+-->
+<table>
+    <tr>
+        <th >Name</th>
+        <th>Vacation from</th>
+        <th>Vacation to</th>
+        <th>Reason</th>
+    </tr>
+    {% for x in vac %}
+    <tr>
+        <td>{{x.Name}}</td>
+        <td>{{x.Vacation_from}}</td>
+        <td>{{x.Vacation_to}}</td>
+        <td>{{x.Reason}}</td>
+        <td>
+            <button class="approve" onclick="keep(this)">Approve</button>
+            <!--<button  class="reject" onclick="remove(this)"> > Reject </button>-->
+
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock content%}

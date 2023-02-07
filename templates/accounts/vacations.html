@@ -1,0 +1,67 @@
+{% extends 'basevacations.html'%}
+{% load static%}
+
+{% block content%}
+<!--<form id="myForm" action="show-vacations.html" method="get">
+    <div class="enter-the-data">
+        <label>Name</label>
+        <input required id="name" type="text" placeholder="Type your name..." name="name">
+        <label>ID</label>
+        <input required id="id" type="number" placeholder="Type your id..." name="id">
+    </div>
+
+    <div class="box">
+        <form name="" targe="_blanck" action="{% url 'show-vacations'%}">
+            <label>From</label>
+            <input required id="fromDate" type="date" name="fromDate">
+            <label>To</label>
+            <input required id="toDate" type="date" name="toDate">
+            <div id="reason" >
+                <textarea name="reason" placeholder="Enter the reason of the vacation" required></textarea>
+            </div>
+            <a href="{% url 'show-vacations'%}" id="submitVac"> Submit </a>
+             <button id="submitVac"> Submit </button> 
+        </form>-->
+        <form id="myForm" action='' method="POST">
+            {% csrf_token %}
+            <div class="enter-the-data">
+                <label>Name</label>
+                <input required id="name" type="text" placeholder="Type your name..." name="name">
+                <label>ID</label>
+                <input list="emp" id="id" type="text" placeholder="Type your id..." name="id" required>
+                <datalist id="emp">
+                    {% for E in emp %}
+                
+                        <option value="{{emp.id}}">{{ emp }} </option>
+                    {% endfor %}
+                </datalist>
+            </div>
+
+            <div class="box">
+                    <label>From</label>
+                    <input required id="fromDate" type="date" name="fromDate">
+                    <label>To</label>
+                    <input required id="toDate" type="date" name="toDate">
+                    <div id="reason" >
+                        <textarea name="reason" placeholder="Enter the reason of the vacation" required></textarea>
+                    </div>
+                    <a href="{% url 'show-vacations'%}" id="submitVac" > Show vacation </a>
+                   <button id="submitVac" href="{% url 'show-vacations' %}" > Submit </button>
+                   
+                   <!--<button  id="submitVac"> <a href="accounts/show-vacations.html"> Submit </a></button>-->
+
+
+
+        <!--
+        <form class="box-2"  targe="_blanck" action="show-vacations.html">
+             <input class="rev" type="submit" value="Review vacations"> 
+        </form>
+        -->
+    </div>
+</form>
+<!--<button id="showvacation" action="show-vacations.html"> Show Vacations </button>
+<button  id="submitVac"> <a href="show-vacations.html"> Show Vacations </button>-->
+
+{% endblock content%}
+
+

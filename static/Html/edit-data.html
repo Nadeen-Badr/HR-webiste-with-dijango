@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="descripion" content="this is the update page"/>
+        <link rel="stylesheet" href="../Css/style.css">
+        <title> Updating page </title>
+     
+    </head>
+    <body>
+        <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <label class="logo">Global HR</label>
+                <ul>
+                    <li><a class="" href="home.html" target="_self">Home</a></li>
+                    <li><a class="" href="ourfirstpage.html" target="_self">Global HR</a></li>
+                    <li><a href="loginpage.html"  target="_self">log in</a></li>
+                    <li><a href="insertEmployee.html" target="_self">Add Employee</a></li>
+                    <li><a class="active" href="search.html" target="_self">Search</a></li>
+                    <li><a href="vacation.html"  target="_self">Vacations</a></li>
+                </ul>
+            </nav>
+              
+        <div class="mainTable">
+            <table id="table" border="1" >
+                <tr>
+                    <th> name</th>
+                    <th>Id</th>
+                    <th>email</th>
+                    <th>adress</th>
+                    <th>Phone number</th>
+                    <th>Gender</th>
+                    <th>martial status</th>
+                    <th>vaction days</th>
+                    <th>approved vaction days</th>
+                    <th>salary</th>
+                    <th>birth day</th>
+                </tr>
+                
+                    <tr>
+                    <td>Youssef </td>
+                    <td> 1</td>
+                    <td>youssefJoe00@gmail.com </td>
+                    <th>Helwan</th>
+                    <td>002746489</td>
+                    <td>male</td>
+                    <td>single</td>
+                    <th>7</th>
+                    <th>0</th>
+                    <th>5000</th>
+                    <th>9-24-2000</th>
+                </tr>
+                <tr>
+                    <td>Nadin </td>
+                    <td>2 </td>
+                    <td>nadin00@gmail.com </td>
+                    <th>cairo</th>
+                    <td>007892340</td>
+                    <td>female</td>
+                    <td>single</td>
+                    <th>7</th>
+                    <th>0</th>
+                    <th>10000</th>
+                    <th>5-18-1990</th>
+                </tr>
+                <tr>
+                    <td>Habiba </td>
+                    <td>3 </td>
+                    <td>habiba00@gmail.com </td>
+                    <th>cairo</th>
+                    <td>008926389</td>
+                    <td>female</td>
+                    <td>single</td>
+                    <th>9</th>
+                    <th>0</th>
+                    <th>8000</th>
+                    <th>9-2-2000</th>
+                </tr>
+                </tbody>
+            </table>
+            </div> 
+        <br>
+        
+    <div class="container">
+            <div class="card">
+                <div class="inner-box">
+                    <div class="card-front">
+                        <div clas="log" >
+                           </div>
+                                <h1>Edit employee's data</h1>
+                                <div class="editTable">
+                                    <div>
+                                        <label for="name">Employee's Name</label>
+                                        <input id="name" type="text" >
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="id">Employee's ID</label>
+                                        <input id="ide" type="text" min="1" max="10000" readonly>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="email">Employee's Email</label>
+                                        <input id="email" type="email" required placeholder="Write a valid email">
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="address">Employee's Address</label>
+                                        <input id="address" type="text" required placeholder="Write your address">
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="phone num">Employee's Phone number</label>
+                                        <input id="phone num" type="text" required placeholder="Write Phone number" min="11" max="11">
+                                    </div>
+                                    <br>
+                                    <div>
+                                        
+                                        <label>Employee Gender</label><br>
+                                        <input type="radio" name="gender" id="gen" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" id="gen"value="female"> Female<br>
+                                        <input type="radio" name="gender" id="gen"value="other"> Other
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label>Employee's Marital status</label>
+                                         <br>
+                                    
+                                        <select name="marital_status" id="marital_status">
+                                            <option value="Single" selected>Single </option>
+                                            <option value="Married">Married</option>
+                                            <option value="Widowed">Widowed</option>
+                                            <option value="Separated">Separated</option>
+                                            <option value="Divorced">Divorced</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="vac num">Employee's Vacation days </label>
+                                        <input id="vac num" type="number"  min="1" max="100">
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="ap vac num">Employee's Approved Vacation days </label>
+                                        <input id="ap vac num" type="number"  min="1" max="100">
+                                    </div>
+                                    <br>
+                                    
+                                    <div>
+                                        <label for="sal">Employee's Salary </label>
+                                        <input id="sal" type="number" >
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label for="date">Employee's Birth Date:</label>
+                            
+                                         <input type="date" id="date">
+                                    </div>
+                                    <button onclick="editRow()" class="editRowBut">Update</button>
+                                    
+                                    <button onclick="deleteRow()" class="deleteRowBut">Delete</button>
+
+                                </div>
+                            </div>
+        <div class="card-back"></div>
+                </div>
+            </div>
+        </div> 
+      
+        
+    <script src="..\js\delUpdate.js"></script>
+    </body>
+</html>

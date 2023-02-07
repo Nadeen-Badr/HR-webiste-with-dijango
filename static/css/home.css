@@ -1,0 +1,158 @@
+*{
+                padding:0px;
+                margin:0px;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+                font-style: italic;
+
+            }
+            
+            body{
+                font-family: montserrat;
+                font-style: italic;
+
+            }
+            
+            nav{
+                background: #F6F4E8;
+                height:80px;
+                width:100%;
+            }
+            
+            label.logo{
+                color:black;
+                font-size: 50px;
+                line-height: 80px;
+                padding:0 100px;
+                font-weight: bold;
+            }
+            
+            nav ul{
+                float:right;
+                margin-right: 20px;
+            }
+            
+            nav ul li{
+                display: inline-block;
+                line-height: 80px;
+                margin:0 5px
+            }
+            
+            nav ul li a{
+                color:black;
+                font-size: 17px;
+                padding:7px 13px;
+                border-radius: 5px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            
+            a.active,a:hover{
+                background: #BACEC1;
+                transition: .5s;
+                font-size: 25px;
+            }
+            
+            .checkbtn{
+                font-size: 30px;
+                color:white;
+                float:right;
+                line-height: 80px;
+                margin-right: 40px;
+                cursor: pointer;
+                display: none;
+            }
+            
+            #check{
+                display: none;
+            }
+            
+            @media (max-width:952px){
+                .logo{
+                    font-size: 30px;
+                    padding-left: 50px;
+                }
+                nav ul li a{
+                    font-size: 16px;
+                }
+            }
+            
+            @media (max-width: 858px){
+                .checkbtn{
+                    display: block;
+                }
+                ul{
+                    position: fixed;
+                    width:100%;
+                    height: 100vh;
+                    background: #BACEC1;
+                    top:80px;
+                    left: -100%;
+                    text-align: center;
+                    transform: all .5s; 
+                }
+                
+                nav ul li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 20px;
+                }
+                nav ul li a{
+                    font-size: 20px;
+                }
+                a:hover,a.active{
+                    background: none;
+                    color:#BACEC1;
+                }
+                #check:checked ~ ul{
+                    left:0;
+                }
+            }
+            .content{
+                background-color: #BACEC1;
+            }
+            .content p{
+                margin:15px;
+                padding:10px;
+                font-size: 18px;
+                font-weight: bolder;
+            }
+            .order-list ol li{
+                padding:5px;
+                margin: 50px;
+                list-style:decimal;
+                font-size: 25px;
+                font-weight: bold;    
+            }
+            
+            .order-list ol li:hover{
+                font-size: 35px;
+                cursor: pointer;
+                color:black;
+                background-size: 20px 20px;
+                transition:  .5s;
+            }
+            .content{
+                        margin: 10px;
+                        padding:10px;
+            }
+            .d{font-size: 25px;}
+            .we{
+                        color:black;
+                        font-size: 40px;
+                        transition: .5s;
+            }
+            .we:hover{
+                        color:white;
+                        font-size: 60px;
+                        transition: .5s;
+            }
+            .f:hover{
+                        text-decoration:line-through;          
+            }
+            section{
+                /*background: url(istockphoto-1175702622-612x612.jpg) no-repeat;*/
+                background-size: cover;
+                height: calc(100vh - 80px);
+            }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="Determine The vacations">
+            <link rel="stylesheet" href="..\CSS\vacation.css">
+        </head>
+        <body>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+                <label class="logo">Global HR</label>
+                <ul>
+                    <li><a class="" href="home.html" target="_self">Home</a></li>
+                    <li><a class="" href="ourfirstpage.html" target="_self">Global HR</a></li>
+                    <li><a href="loginpage.html"  target="_self">log in</a></li>
+                    <li><a href="addemp.html" target="_self">Add Employee</a></li>
+                    <li><a href="search.html" target="_self">Search</a></li>
+                    <li><a class="active" href="vacation.html"  target="_self">Vacations</a></li>
+                </ul>
+            </nav>
+                
+            <form id="myForm" action="show-vacations.html" method="get">
+                <div class="enter-the-data">
+                    <label>Name</label>
+                    <input required id="name" type="text" placeholder="Type your name..." name="name">
+                    <label>ID</label>
+                    <input required id="id" type="number" placeholder="Type your id..." name="id">
+                </div>
+
+                <div class="box">
+                    <form name="" targe="_blanck" action="">
+                        <label>From</label>
+                        <input required id="fromDate" type="date" name="fromDate">
+                        <label>To</label>
+                        <input required id="toDate" type="date" name="toDate">
+                        <div id="reason" >
+                            <textarea name="reason" placeholder="Enter the reason of the vacation" required></textarea>
+                        </div>
+                        <button id="submitVac"> Submit </button>
+                    </form>
+                    <!--
+                    <form class="box-2"  targe="_blanck" action="show-vacations.html">
+                         <input class="rev" type="submit" value="Review vacations"> 
+                    </form>
+                    -->
+                </div>
+            </form>
+        </body>
+    </html>

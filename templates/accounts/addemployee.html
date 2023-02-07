@@ -1,0 +1,52 @@
+{% extends 'add.html'%}
+{% load static%}
+
+{% block content%}
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="btn" name="Update" style="background-color: white; border: none; border-radius: 5px; color: #333; /* Dark grey */ padding: 3px 3px">
+        
+            </form>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th> name</th>
+                          <th>Id</th>
+                          <th>email</th>
+                          <th>adress</th>
+                          <th>Phone number</th>
+                          <th>Gender</th>
+                          <th>martial status</th>
+                          <th>vaction days</th>
+                          <th>approved vaction days</th>
+                          <th>salary</th>
+                          <th>birth day</th>
+                          <th></th>
+                        </tr>
+                        {% for emp  in emp %}
+                         <tr>
+                            <th> {{emp.Name}}</th>
+                            <th>{{emp.Emp_Id}}</th>
+                            <th>{{emp.Email}}</th>
+                            <th>{{emp.address}}</th>
+                            <th>{{emp.Phone_number}}</th>
+                            <th>{{emp.Gender}}</th>
+                            <th>{{emp.Martial_status}}</th>
+                            <th>{{emp.Vacation_Days}}</th>
+                            <th>{{emp.Vacation_Days_approved}}</th>
+                            <th>{{emp.Salary}}</th>
+                            <th>{{emp.Birthday}}</th>
+                          </tr>
+                        {% endfor %}
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+                  
+                
+
+                
+           
+  
+{% endblock%}
